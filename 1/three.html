@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Measurement Units - Interactive Learning</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+html { scroll-behavior: smooth; }
+</style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+<!-- NAVBAR -->
+<nav class="bg-indigo-700 text-white fixed w-full top-0 shadow z-50">
+  <div class="flex justify-between items-center px-6 py-3">
+    <h1 class="font-bold text-lg">📘 Measurement Units</h1>
+    <div class="space-x-4 text-sm">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#speed" class="hover:underline">Speed</a>
+      <a href="#storage" class="hover:underline">Storage</a>
+      <a href="#frequency" class="hover:underline">Frequency</a>
+      <a href="#quiz" class="hover:underline">Quiz</a>
+      <a href="#tps" class="hover:underline">TPS/TGS</a>
+      <a href="#project" class="hover:underline">Project</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="pt-24 p-6 text-center">
+  <h2 class="text-3xl font-bold text-indigo-700">1.3 Measurement Units in Computer</h2>
+  <p class="text-gray-600 mt-2">
+    Learn CPU speed, frequency, storage units, and how computers measure performance & data.
+  </p>
+</section>
+
+<!-- SPEED -->
+<section id="speed" class="p-6 bg-white mx-6 rounded-xl shadow">
+  <h2 class="text-2xl font-bold text-indigo-600">⚡ Processing Speed</h2>
+
+  <p class="mt-3 text-gray-700">
+    CPU speed is measured in <b>Hertz (Hz)</b>.
+  </p>
+
+  <div class="mt-4 bg-indigo-50 p-4 rounded">
+    <h3 class="font-bold">🧠 What is a Cycle?</h3>
+    <p>
+      A <b>cycle</b> is one complete action performed by the CPU:
+    </p>
+    <ul class="list-disc pl-5 mt-2">
+      <li>Fetch instruction</li>
+      <li>Decode instruction</li>
+      <li>Execute instruction</li>
+    </ul>
+    <p class="mt-2 text-sm text-gray-600">
+      One cycle = one full processing step inside CPU.
+    </p>
+  </div>
+
+  <div class="mt-4">
+    <h3 class="font-bold">📌 Units</h3>
+    <ul class="list-disc pl-5">
+      <li>Hz = 1 cycle per second</li>
+      <li>MHz = 1 million cycles per second</li>
+      <li>GHz = 1 billion cycles per second</li>
+    </ul>
+  </div>
+</section>
+
+<!-- STORAGE -->
+<section id="storage" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+  <h2 class="text-2xl font-bold text-green-600">💾 Storage Units</h2>
+
+  <p class="mt-3 text-gray-700">
+    Computers store data in binary format (0 and 1).
+  </p>
+
+  <ul class="list-disc pl-5 mt-3">
+    <li>1 Bit = smallest unit (0 or 1)</li>
+    <li>1 Byte = 8 bits</li>
+    <li>1 KB = 1024 Bytes</li>
+    <li>1 MB = 1024 KB</li>
+    <li>1 GB = 1024 MB</li>
+    <li>1 TB = 1024 GB</li>
+  </ul>
+</section>
+
+<!-- FREQUENCY -->
+<section id="frequency" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+  <h2 class="text-2xl font-bold text-purple-600">📡 Frequency in Computers (IMPORTANT)</h2>
+
+  <p class="mt-3 text-gray-700">
+    Frequency means <b>how many times something repeats in 1 second</b>.
+  </p>
+
+  <div class="mt-4 bg-purple-50 p-4 rounded">
+    <h3 class="font-bold">🖥️ In Computer System</h3>
+    <ul class="list-disc pl-5 mt-2">
+      <li>CPU frequency = how many instructions processed per second</li>
+      <li>RAM frequency = how fast data is read/written</li>
+      <li>Network frequency = how many data signals are transmitted per second</li>
+    </ul>
+  </div>
+
+  <div class="mt-4">
+    <h3 class="font-bold">📊 Simple Example</h3>
+    <p>
+      If CPU = 3 GHz → It performs <b>3 billion cycles per second</b>.
+    </p>
+    <p class="text-sm text-gray-600 mt-1">
+      More frequency = more data processed per second.
+    </p>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+  <h2 class="text-2xl font-bold mb-4">🧠 Quiz (10 Questions)</h2>
+  <div id="quizBox"></div>
+
+  <button onclick="submitQuiz()" class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded">
+    Submit Quiz
+  </button>
+
+  <p id="result" class="mt-3 font-bold"></p>
+</section>
+
+<!-- TPS / TGS -->
+<section id="tps" class="p-6 grid md:grid-cols-2 gap-4">
+  <div class="bg-white p-4 rounded shadow">
+    <h2 class="font-bold">🤝 TPS (Think–Pair–Share)</h2>
+    <ol class="list-decimal pl-5 mt-2">
+      <li>Why CPU uses cycles instead of time?</li>
+      <li>Compare GHz phone vs MHz old computers</li>
+      <li>Explain storage growth in real life apps</li>
+    </ol>
+  </div>
+
+  <div class="bg-white p-4 rounded shadow">
+    <h2 class="font-bold">👥 TGS (Think–Group–Share)</h2>
+    <ol class="list-decimal pl-5 mt-2">
+      <li>Group: Why binary system is used?</li>
+      <li>Discuss: RAM vs Storage speed difference</li>
+      <li>Present: Internet speed vs CPU speed difference</li>
+    </ol>
+  </div>
+</section>
+
+<!-- PROJECT -->
+<section id="project" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+  <h2 class="text-xl font-bold">📌 Home Assignment / Project</h2>
+  <ul class="list-disc pl-5 mt-2">
+    <li>Make PPT: CPU speed evolution (MHz → GHz)</li>
+    <li>Create chart: Storage units comparison</li>
+    <li>Design poster: “What is a CPU cycle?”</li>
+    <li>Interview: Ask 5 people about GB usage per phone</li>
+  </ul>
+</section>
+
+<script>
+const questions = [
+  {q:"1 Byte equals?", options:["4 bits","8 bits","16 bits","32 bits"], answer:1},
+  {q:"CPU speed unit?", options:["Byte","Hertz","Bit","Pixel"], answer:1},
+  {q:"1 KB equals?", options:["1000 bytes","1024 bytes","512 bytes","2048 bytes"], answer:1},
+  {q:"GHz means?", options:["10^9 cycles/sec","10^6 cycles/sec","10^3 cycles/sec","10^12 cycles/sec"], answer:0},
+  {q:"Smallest unit?", options:["Byte","Bit","KB","MB"], answer:1},
+  {q:"1 MB equals?", options:["1024 KB","100 KB","1000 KB","2048 KB"], answer:0},
+  {q:"CPU cycle means?", options:["storage","one instruction process","internet speed","memory size"], answer:1},
+  {q:"Storage is based on?", options:["decimal","binary","hex","octal"], answer:1},
+  {q:"Frequency means?", options:["size","speed repetition","weight","color"], answer:1},
+  {q:"CPU processes data in?", options:["cycles","pixels","frames","volts"], answer:0}
+];
+
+const quizBox = document.getElementById("quizBox");
+
+questions.forEach((q,i)=>{
+  let html = `<div class="mb-3">
+    <p class="font-semibold">${q.q}</p>`;
+  q.options.forEach((opt,j)=>{
+    html += `<label class="block">
+      <input type="radio" name="q${i}" value="${j}"> ${opt}
+    </label>`;
+  });
+  html += `</div>`;
+  quizBox.innerHTML += html;
+});
+
+function submitQuiz(){
+  let score = 0;
+  questions.forEach((q,i)=>{
+    let selected = document.querySelector(`input[name='q${i}']:checked`);
+    if(selected && parseInt(selected.value) === q.answer){
+      score++;
+    }
+  });
+  document.getElementById("result").innerText =
+    `Score: ${score} / ${questions.length}`;
+}
+</script>
+
+</body>
+</html>
