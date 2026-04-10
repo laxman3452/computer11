@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory - Class 11 Interactive</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+html { scroll-behavior: smooth; }
+</style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+<!-- NAVBAR -->
+<nav class="bg-indigo-800 text-white fixed w-full top-0 z-50 shadow">
+  <div class="flex justify-between items-center px-6 py-3">
+    <h1 class="font-bold text-lg">💾 Memory System</h1>
+    <div class="space-x-4 text-sm">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#primary" class="hover:underline">Primary Memory</a>
+      <a href="#secondary" class="hover:underline">Secondary Memory</a>
+      <a href="#compare" class="hover:underline">Comparison</a>
+      <a href="#quiz" class="hover:underline">Quiz</a>
+      <a href="#tps" class="hover:underline">TPS/TGS</a>
+      <a href="#project" class="hover:underline">Project</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="pt-24 p-6 text-center">
+  <h2 class="text-3xl font-bold text-indigo-800">1.9 Memory in Computer System</h2>
+  <p class="text-gray-600 mt-2">
+    Understanding how data is stored, accessed, and managed in computer systems.
+  </p>
+</section>
+
+<!-- PRIMARY MEMORY -->
+<section id="primary" class="p-6 bg-white mx-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold text-indigo-700">🧠 Primary Memory (Main Memory)</h2>
+
+  <div class="mt-3 bg-indigo-50 p-4 rounded">
+    <p>
+      Primary memory is the memory that is directly accessed by the CPU.
+      It is fast but has limited storage capacity.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-4 mt-4">
+
+    <div class="bg-green-50 p-4 rounded">
+      <h3 class="font-bold">⚡ RAM (Random Access Memory)</h3>
+      <ul class="list-disc pl-5 text-sm mt-2">
+        <li>Volatile memory (data lost when power off)</li>
+        <li>Used for temporary storage</li>
+        <li>Faster access</li>
+      </ul>
+      <p class="text-sm mt-2 text-gray-600">Example: Running apps, system memory</p>
+    </div>
+
+    <div class="bg-red-50 p-4 rounded">
+      <h3 class="font-bold">📀 ROM (Read Only Memory)</h3>
+      <ul class="list-disc pl-5 text-sm mt-2">
+        <li>Non-volatile memory</li>
+        <li>Stores permanent instructions</li>
+        <li>Cannot be easily modified</li>
+      </ul>
+      <p class="text-sm mt-2 text-gray-600">Example: BIOS system instructions</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SECONDARY -->
+<section id="secondary" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold text-green-700">💾 Secondary Memory</h2>
+
+  <div class="mt-3 bg-green-50 p-4 rounded">
+    <p>
+      Secondary memory is used for permanent data storage.
+      It is slower but has large storage capacity.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-4 mt-4">
+
+    <div class="bg-blue-50 p-4 rounded">
+      <h3 class="font-bold">🖴 Hard Disk</h3>
+      <p class="text-sm">Traditional large storage device</p>
+    </div>
+
+    <div class="bg-purple-50 p-4 rounded">
+      <h3 class="font-bold">⚡ SSD</h3>
+      <p class="text-sm">Faster storage using flash memory</p>
+    </div>
+
+    <div class="bg-yellow-50 p-4 rounded">
+      <h3 class="font-bold">🔌 Pen Drive</h3>
+      <p class="text-sm">Portable storage device</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- COMPARISON -->
+<section id="compare" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold">📊 Primary vs Secondary Memory</h2>
+
+  <table class="w-full text-center border mt-4">
+    <tr class="bg-indigo-700 text-white">
+      <th class="p-2">Feature</th>
+      <th>Primary Memory</th>
+      <th>Secondary Memory</th>
+    </tr>
+    <tr>
+      <td>Speed</td>
+      <td>Very Fast</td>
+      <td>Slow</td>
+    </tr>
+    <tr class="bg-gray-100">
+      <td>Storage</td>
+      <td>Small</td>
+      <td>Large</td>
+    </tr>
+    <tr>
+      <td>Volatility</td>
+      <td>Mostly Volatile</td>
+      <td>Non-Volatile</td>
+    </tr>
+    <tr class="bg-gray-100">
+      <td>Usage</td>
+      <td>Temporary processing</td>
+      <td>Permanent storage</td>
+    </tr>
+  </table>
+
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold mb-4">🧠 Technical Quiz (10 Questions)</h2>
+  <div id="quizBox"></div>
+
+  <button onclick="submitQuiz()" class="mt-4 bg-indigo-800 text-white px-4 py-2 rounded">
+    Submit Quiz
+  </button>
+
+  <p id="result" class="mt-3 font-bold"></p>
+
+</section>
+
+<!-- TPS / TGS -->
+<section id="tps" class="p-6 grid md:grid-cols-2 gap-4">
+
+  <div class="bg-white p-4 rounded shadow">
+    <h2 class="font-bold text-lg">🤝 TPS (Think–Pair–Share)</h2>
+    <ol class="list-decimal pl-5 mt-2">
+      <li>Why RAM is called volatile memory?</li>
+      <li>Why SSD is faster than HDD?</li>
+      <li>Difference between primary and secondary memory</li>
+    </ol>
+  </div>
+
+  <div class="bg-white p-4 rounded shadow">
+    <h2 class="font-bold text-lg">👥 TGS (Think–Group–Share)</h2>
+    <ol class="list-decimal pl-5 mt-2">
+      <li>Group: List storage devices in your home</li>
+      <li>Discuss: Why ROM is important in booting system</li>
+      <li>Present: Evolution of storage devices</li>
+    </ol>
+  </div>
+
+</section>
+
+<!-- PROJECT -->
+<section id="project" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+
+  <h2 class="text-xl font-bold">📌 Home Assignment / Project Work</h2>
+  <ul class="list-disc pl-5 mt-2">
+    <li>Create PPT: Memory hierarchy in computer system</li>
+    <li>Draw diagram of RAM vs ROM</li>
+    <li>Compare SSD vs HDD performance</li>
+    <li>Survey: Storage devices used in student laptops</li>
+  </ul>
+
+</section>
+
+<script>
+const questions = [
+  {q:"Primary memory is?", options:["Permanent","Temporary","External","Offline"], answer:1},
+  {q:"RAM is?", options:["Volatile","Non-volatile","Permanent","Read-only"], answer:0},
+  {q:"ROM stores?", options:["Temporary data","Permanent instructions","Games","Files"], answer:1},
+  {q:"Secondary memory example?", options:["RAM","ROM","SSD","Register"], answer:2},
+  {q:"Hard disk is?", options:["Primary","Secondary","CPU","Input"], answer:1},
+  {q:"SSD is faster than?", options:["RAM","HDD","CPU","ROM"], answer:1},
+  {q:"Primary memory is?", options:["Slow","Fast","External","Offline"], answer:1},
+  {q:"ROM is?", options:["Volatile","Non-volatile","Temporary","Cache"], answer:1},
+  {q:"Data lost in RAM when?", options:["Power off","Power on","Internet off","Restart only"], answer:0},
+  {q:"Pen drive is?", options:["Primary","Secondary","CPU","RAM"], answer:1}
+];
+
+const quizBox = document.getElementById("quizBox");
+
+questions.forEach((q,i)=>{
+  let html = `<div class="mb-3">
+    <p class="font-semibold">${q.q}</p>`;
+  q.options.forEach((opt,j)=>{
+    html += `<label class="block">
+      <input type="radio" name="q${i}" value="${j}"> ${opt}
+    </label>`;
+  });
+  html += `</div>`;
+  quizBox.innerHTML += html;
+});
+
+function submitQuiz(){
+  let score = 0;
+  questions.forEach((q,i)=>{
+    let selected = document.querySelector(`input[name='q${i}']:checked`);
+    if(selected && parseInt(selected.value) === q.answer){
+      score++;
+    }
+  });
+
+  document.getElementById("result").innerText =
+    `Score: ${score} / ${questions.length}`;
+}
+</script>
+
+</body>
+</html>
