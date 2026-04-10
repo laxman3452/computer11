@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Computing - Class 11 Interactive</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+html { scroll-behavior: smooth; }
+</style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+<!-- NAVBAR -->
+<nav class="bg-green-700 text-white fixed w-full top-0 z-50 shadow">
+  <div class="flex justify-between items-center px-6 py-3">
+    <h1 class="font-bold text-lg">📱 Mobile Computing</h1>
+    <div class="space-x-4 text-sm">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#definition" class="hover:underline">Definition</a>
+      <a href="#devices" class="hover:underline">Devices</a>
+      <a href="#applications" class="hover:underline">Applications</a>
+      <a href="#quiz" class="hover:underline">Quiz</a>
+      <a href="#tps" class="hover:underline">TPS/TGS</a>
+      <a href="#project" class="hover:underline">Project</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="pt-24 p-6 text-center">
+  <h2 class="text-3xl font-bold text-green-700">1.5 Mobile Computing</h2>
+  <p class="text-gray-600 mt-2">
+    Learn how portable devices allow access to data and services anytime, anywhere.
+  </p>
+</section>
+
+<!-- DEFINITION -->
+<section id="definition" class="p-6 bg-white mx-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold text-green-700">📘 Definition</h2>
+
+  <div class="mt-3 bg-green-50 p-4 rounded">
+    <p class="text-gray-800">
+      <b>Mobile Computing</b> is the use of portable computing devices
+      that allow users to access data, applications, and services
+      <b>anytime and anywhere</b> using wireless communication.
+    </p>
+  </div>
+
+  <div class="mt-4">
+    <h3 class="font-bold">🧠 Key Features</h3>
+    <ul class="list-disc pl-5 mt-2">
+      <li>Portability (can be carried anywhere)</li>
+      <li>Wireless connectivity (Wi-Fi, 4G, 5G)</li>
+      <li>Real-time communication</li>
+      <li>Cloud-based access</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- DEVICES -->
+<section id="devices" class="p-6 grid md:grid-cols-3 gap-4">
+
+  <div class="bg-white p-4 rounded-xl shadow border-t-4 border-green-500">
+    <h2 class="font-bold text-lg">📱 Smartphones</h2>
+    <p class="text-sm mt-2">
+      Most common mobile computing device used for communication and apps.
+    </p>
+    <ul class="list-disc pl-5 mt-2 text-sm">
+      <li>Android / iOS phones</li>
+      <li>Internet access</li>
+      <li>Apps & GPS support</li>
+    </ul>
+  </div>
+
+  <div class="bg-white p-4 rounded-xl shadow border-t-4 border-blue-500">
+    <h2 class="font-bold text-lg">📲 Tablets</h2>
+    <p class="text-sm mt-2">
+      Larger than smartphones, used for reading and multimedia.
+    </p>
+    <ul class="list-disc pl-5 mt-2 text-sm">
+      <li>Touchscreen devices</li>
+      <li>E-learning support</li>
+      <li>Portable education tools</li>
+    </ul>
+  </div>
+
+  <div class="bg-white p-4 rounded-xl shadow border-t-4 border-purple-500">
+    <h2 class="font-bold text-lg">💻 Laptops</h2>
+    <p class="text-sm mt-2">
+      Portable computers used for work, study, and programming.
+    </p>
+    <ul class="list-disc pl-5 mt-2 text-sm">
+      <li>High performance</li>
+      <li>Battery powered</li>
+      <li>Supports software development</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- APPLICATIONS -->
+<section id="applications" class="p-6 bg-white mx-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold text-green-700">🌍 Applications of Mobile Computing</h2>
+
+  <div class="grid md:grid-cols-2 gap-4 mt-4">
+
+    <div class="bg-gray-50 p-4 rounded">
+      <h3 class="font-bold">🏦 Online Banking</h3>
+      <p class="text-sm">Mobile banking apps allow transactions anytime.</p>
+    </div>
+
+    <div class="bg-gray-50 p-4 rounded">
+      <h3 class="font-bold">🗺️ GPS Navigation</h3>
+      <p class="text-sm">Google Maps helps real-time location tracking.</p>
+    </div>
+
+    <div class="bg-gray-50 p-4 rounded">
+      <h3 class="font-bold">📱 Social Media</h3>
+      <p class="text-sm">Facebook, Instagram, TikTok communication.</p>
+    </div>
+
+    <div class="bg-gray-50 p-4 rounded">
+      <h3 class="font-bold">🎓 E-Learning</h3>
+      <p class="text-sm">Online classes via Zoom, Google Classroom.</p>
+    </div>
+
+    <div class="bg-gray-50 p-4 rounded">
+      <h3 class="font-bold">🛒 E-Commerce</h3>
+      <p class="text-sm">Online shopping using mobile apps.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold mb-4">🧠 Technical Quiz (10 Questions)</h2>
+  <div id="quizBox"></div>
+
+  <button onclick="submitQuiz()" class="mt-4 bg-green-600 text-white px-4 py-2 rounded">
+    Submit Quiz
+  </button>
+
+  <p id="result" class="mt-3 font-bold"></p>
+
+</section>
+
+<!-- TPS / TGS -->
+<section id="tps" class="p-6 grid md:grid-cols-2 gap-4">
+
+  <div class="bg-white p-4 rounded shadow">
+    <h2 class="font-bold text-lg">🤝 TPS (Think–Pair–Share)</h2>
+    <ol class="list-decimal pl-5 mt-2">
+      <li>Why mobile computing is important in daily life?</li>
+      <li>How smartphones changed education?</li>
+      <li>Compare laptop vs smartphone usage</li>
+    </ol>
+  </div>
+
+  <div class="bg-white p-4 rounded shadow">
+    <h2 class="font-bold text-lg">👥 TGS (Think–Group–Share)</h2>
+    <ol class="list-decimal pl-5 mt-2">
+      <li>Group: List mobile apps used daily</li>
+      <li>Discuss: Future of mobile computing (AI + 5G)</li>
+      <li>Present: Advantages and disadvantages</li>
+    </ol>
+  </div>
+
+</section>
+
+<!-- PROJECT -->
+<section id="project" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+
+  <h2 class="text-xl font-bold">📌 Home Assignment / Project Work</h2>
+  <ul class="list-disc pl-5 mt-2">
+    <li>Create PPT: Mobile computing in daily life</li>
+    <li>Poster: “Smartphone as a learning device”</li>
+    <li>Survey: Apps used by students (top 10)</li>
+    <li>Report: Advantages of mobile banking in Nepal</li>
+  </ul>
+
+</section>
+
+<script>
+const questions = [
+  {q:"Mobile computing means?", options:["Desktop use","Portable access anywhere","Offline computing","Gaming only"], answer:1},
+  {q:"Example of mobile device?", options:["Supercomputer","Smartphone","Mainframe","Server"], answer:1},
+  {q:"Main feature of mobile computing?", options:["Fixed location","Portability","Heavy weight","Wired only"], answer:1},
+  {q:"Used for navigation?", options:["GPS","CPU","RAM","ROM"], answer:0},
+  {q:"E-learning example?", options:["Google Classroom","MS Paint","Notepad","Calculator"], answer:0},
+  {q:"Wireless technology?", options:["Wi-Fi","USB only","LAN cable","Printer"], answer:0},
+  {q:"Mobile computing supports?", options:["Only gaming","Anytime access","Offline only","No internet"], answer:1},
+  {q:"Device NOT mobile computing?", options:["Laptop","Smartphone","Desktop PC","Tablet"], answer:2},
+  {q:"E-commerce means?", options:["Online shopping","Offline shop","Bank only","Gaming"], answer:0},
+  {q:"Mobile apps run on?", options:["OS","Printer","Monitor","CPU fan"], answer:0}
+];
+
+const quizBox = document.getElementById("quizBox");
+
+questions.forEach((q,i)=>{
+  let html = `<div class="mb-3">
+    <p class="font-semibold">${q.q}</p>`;
+  q.options.forEach((opt,j)=>{
+    html += `<label class="block">
+      <input type="radio" name="q${i}" value="${j}"> ${opt}
+    </label>`;
+  });
+  html += `</div>`;
+  quizBox.innerHTML += html;
+});
+
+function submitQuiz(){
+  let score = 0;
+  questions.forEach((q,i)=>{
+    let selected = document.querySelector(`input[name='q${i}']:checked`);
+    if(selected && parseInt(selected.value) === q.answer){
+      score++;
+    }
+  });
+
+  document.getElementById("result").innerText =
+    `Score: ${score} / ${questions.length}`;
+}
+</script>
+
+</body>
+</html>
