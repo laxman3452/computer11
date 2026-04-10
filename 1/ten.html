@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Input & Output Devices - Class 11</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+html { scroll-behavior: smooth; }
+</style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+<!-- NAVBAR -->
+<nav class="bg-blue-900 text-white fixed w-full top-0 z-50 shadow">
+  <div class="flex justify-between items-center px-6 py-3">
+    <h1 class="font-bold text-lg">⌨️ Input & Output Devices</h1>
+    <div class="space-x-4 text-sm">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#input" class="hover:underline">Input</a>
+      <a href="#output" class="hover:underline">Output</a>
+      <a href="#flow" class="hover:underline">IPO Model</a>
+      <a href="#quiz" class="hover:underline">Quiz</a>
+      <a href="#tps" class="hover:underline">TPS/TGS</a>
+      <a href="#project" class="hover:underline">Project</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="pt-24 p-6 text-center">
+  <h2 class="text-3xl font-bold text-blue-900">1.10 Input and Output Devices</h2>
+  <p class="text-gray-600 mt-2">
+    Understanding devices that help in communication between user and computer system.
+  </p>
+</section>
+
+<!-- INPUT DEVICES -->
+<section id="input" class="p-6 bg-white mx-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold text-green-700">⌨️ Input Devices</h2>
+
+  <div class="mt-3 bg-green-50 p-4 rounded">
+    <p>
+      Input devices are hardware components used to enter data and instructions into the computer.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-4 gap-4 mt-4">
+
+    <div class="bg-gray-50 p-3 rounded">
+      <h3 class="font-bold">⌨️ Keyboard</h3>
+      <p class="text-sm">Used for typing text and commands.</p>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <h3 class="font-bold">🖱️ Mouse</h3>
+      <p class="text-sm">Used for pointing and clicking.</p>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <h3 class="font-bold">📠 Scanner</h3>
+      <p class="text-sm">Converts paper documents into digital form.</p>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <h3 class="font-bold">🎤 Microphone</h3>
+      <p class="text-sm">Converts voice into digital signals.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- OUTPUT DEVICES -->
+<section id="output" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold text-red-600">🖥️ Output Devices</h2>
+
+  <div class="mt-3 bg-red-50 p-4 rounded">
+    <p>
+      Output devices display or produce the processed result from the computer.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-4 gap-4 mt-4">
+
+    <div class="bg-gray-50 p-3 rounded">
+      <h3 class="font-bold">🖥️ Monitor</h3>
+      <p class="text-sm">Displays visual output on screen.</p>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <h3 class="font-bold">🖨️ Printer</h3>
+      <p class="text-sm">Produces hard copy on paper.</p>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <h3 class="font-bold">🔊 Speaker</h3>
+      <p class="text-sm">Outputs sound/audio signals.</p>
+    </div>
+
+    <div class="bg-gray-50 p-3 rounded">
+      <h3 class="font-bold">📽️ Projector</h3>
+      <p class="text-sm">Displays large visual output on screen.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- IPO MODEL -->
+<section id="flow" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold">🔁 Input–Process–Output (IPO) Model</h2>
+
+  <div class="mt-4 text-center text-lg font-bold text-blue-700">
+    Input ➜ Processing ➜ Output
+  </div>
+
+  <div class="mt-4 bg-blue-50 p-4 rounded">
+    <ul class="list-disc pl-5">
+      <li>Input: Data entered using input devices</li>
+      <li>Process: CPU processes the data</li>
+      <li>Output: Result shown via output devices</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold mb-4">🧠 Technical Quiz (10 Questions)</h2>
+  <div id="quizBox"></div>
+
+  <button onclick="submitQuiz()" class="mt-4 bg-blue-900 text-white px-4 py-2 rounded">
+    Submit Quiz
+  </button>
+
+  <p id="result" class="mt-3 font-bold"></p>
+
+</section>
+
+<!-- TPS / TGS -->
+<section id="tps" class="p-6 grid md:grid-cols-2 gap-4">
+
+  <div class="bg-white p-4 rounded shadow">
+    <h2 class="font-bold text-lg">🤝 TPS (Think–Pair–Share)</h2>
+    <ol class="list-decimal pl-5 mt-2">
+      <li>Why input devices are important?</li>
+      <li>Difference between scanner and printer</li>
+      <li>How microphone works as input device?</li>
+    </ol>
+  </div>
+
+  <div class="bg-white p-4 rounded shadow">
+    <h2 class="font-bold text-lg">👥 TGS (Think–Group–Share)</h2>
+    <ol class="list-decimal pl-5 mt-2">
+      <li>Group: List input/output devices in lab</li>
+      <li>Discuss: Modern input devices (touch, voice, AI)</li>
+      <li>Present: IPO model in real life example</li>
+    </ol>
+  </div>
+
+</section>
+
+<!-- PROJECT -->
+<section id="project" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+
+  <h2 class="text-xl font-bold">📌 Home Assignment / Project Work</h2>
+  <ul class="list-disc pl-5 mt-2">
+    <li>Create PPT: Input and Output Devices</li>
+    <li>Draw IPO model diagram</li>
+    <li>Make chart of devices used in daily life</li>
+    <li>Survey: Devices used in school computer lab</li>
+  </ul>
+
+</section>
+
+<script>
+const questions = [
+  {q:"Keyboard is?", options:["Input","Output","Storage","CPU"], answer:0},
+  {q:"Monitor is?", options:["Input","Output","Memory","Software"], answer:1},
+  {q:"Scanner converts?", options:["Digital to paper","Paper to digital","Sound to text","Image to sound"], answer:1},
+  {q:"Microphone is?", options:["Output","Input","CPU","Memory"], answer:1},
+  {q:"Printer gives?", options:["Soft copy","Hard copy","Input","Data"], answer:1},
+  {q:"Speaker is?", options:["Input","Output","Storage","CPU"], answer:1},
+  {q:"IPO stands for?", options:["Input Process Output","Internet Protocol Output","Input Print Output","Internal Process Output"], answer:0},
+  {q:"Mouse is used for?", options:["Typing","Pointing","Printing","Storage"], answer:1},
+  {q:"Projector is?", options:["Input","Output","Memory","Software"], answer:1},
+  {q:"CPU is part of?", options:["Input","Processing","Output","Storage"], answer:1}
+];
+
+const quizBox = document.getElementById("quizBox");
+
+questions.forEach((q,i)=>{
+  let html = `<div class="mb-3">
+    <p class="font-semibold">${q.q}</p>`;
+  q.options.forEach((opt,j)=>{
+    html += `<label class="block">
+      <input type="radio" name="q${i}" value="${j}"> ${opt}
+    </label>`;
+  });
+  html += `</div>`;
+  quizBox.innerHTML += html;
+});
+
+function submitQuiz(){
+  let score = 0;
+  questions.forEach((q,i)=>{
+    let selected = document.querySelector(`input[name='q${i}']:checked`);
+    if(selected && parseInt(selected.value) === q.answer){
+      score++;
+    }
+  });
+
+  document.getElementById("result").innerText =
+    `Score: ${score} / ${questions.length}`;
+}
+</script>
+
+</body>
+</html>
