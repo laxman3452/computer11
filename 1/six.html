@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Architecture - Class 11 Interactive</title>
+<script src="https://cdn.tailwindcss.com"></script>
 
+<style>
+html { scroll-behavior: smooth; }
+</style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+<!-- NAVBAR -->
+<nav class="bg-gray-800 text-white fixed w-full top-0 z-50 shadow">
+  <div class="flex justify-between items-center px-6 py-3">
+    <h1 class="font-bold text-lg">🧠 Computer Architecture</h1>
+    <div class="space-x-4 text-sm">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#model" class="hover:underline">Von Neumann</a>
+      <a href="#block" class="hover:underline">Block Diagram</a>
+      <a href="#cpu" class="hover:underline">CPU</a>
+      <a href="#quiz" class="hover:underline">Quiz</a>
+      <a href="#tps" class="hover:underline">TPS/TGS</a>
+      <a href="#project" class="hover:underline">Project</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="pt-24 p-6 text-center">
+  <h2 class="text-3xl font-bold text-gray-800">1.6 Computer Architecture & Organization</h2>
+  <p class="text-gray-600 mt-2">
+    Understanding how a computer system works internally (input → processing → output).
+  </p>
+</section>
+
+<!-- VON NEUMANN MODEL -->
+<section id="model" class="p-6 bg-white mx-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold text-gray-800">🧠 Von Neumann Model (Basic Architecture)</h2>
+
+  <div class="grid md:grid-cols-2 gap-4 mt-4">
+
+    <div class="bg-blue-50 p-4 rounded">
+      <h3 class="font-bold">📥 Input Unit</h3>
+      <p>Accepts data and instructions from user.</p>
+      <p class="text-sm text-gray-600">Example: Keyboard, Mouse</p>
+    </div>
+
+    <div class="bg-green-50 p-4 rounded">
+      <h3 class="font-bold">💾 Memory Unit</h3>
+      <p>Stores data, instructions, and results temporarily.</p>
+      <p class="text-sm text-gray-600">Example: RAM</p>
+    </div>
+
+    <div class="bg-yellow-50 p-4 rounded">
+      <h3 class="font-bold">🧠 CPU</h3>
+      <p>Main processing unit of computer.</p>
+      <p class="text-sm text-gray-600">Brain of computer system</p>
+    </div>
+
+    <div class="bg-purple-50 p-4 rounded">
+      <h3 class="font-bold">📤 Output Unit</h3>
+      <p>Displays processed result to user.</p>
+      <p class="text-sm text-gray-600">Example: Monitor, Printer</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BLOCK FLOW -->
+<section id="block" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold">🔄 Block Diagram Flow</h2>
+
+  <div class="mt-4 text-center text-lg font-semibold text-gray-700">
+    Input Unit ➜ Memory Unit ➜ CPU ➜ Output Unit
+  </div>
+
+  <div class="mt-4 bg-gray-50 p-4 rounded">
+    <p><b>Explanation:</b></p>
+    <ul class="list-disc pl-5 mt-2">
+      <li>Input unit collects data from user</li>
+      <li>Data is stored in memory temporarily</li>
+      <li>CPU processes data using ALU and CU</li>
+      <li>Output unit shows final result</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- CPU -->
+<section id="cpu" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold">⚙️ CPU (Central Processing Unit)</h2>
+
+  <div class="grid md:grid-cols-2 gap-4 mt-4">
+
+    <div class="bg-red-50 p-4 rounded">
+      <h3 class="font-bold">➗ ALU (Arithmetic Logic Unit)</h3>
+      <ul class="list-disc pl-5">
+        <li>Performs calculations (+, -, ×, ÷)</li>
+        <li>Performs logical operations (AND, OR, NOT)</li>
+      </ul>
+    </div>
+
+    <div class="bg-indigo-50 p-4 rounded">
+      <h3 class="font-bold">🎛️ CU (Control Unit)</h3>
+      <ul class="list-disc pl-5">
+        <li>Controls all operations of CPU</li>
+        <li>Manages data flow between units</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+
+  <h2 class="text-2xl font-bold mb-4">🧠 Technical Quiz (10 Questions)</h2>
+  <div id="quizBox"></div>
+
+  <button onclick="submitQuiz()" class="mt-4 bg-gray-800 text-white px-4 py-2 rounded">
+    Submit Quiz
+  </button>
+
+  <p id="result" class="mt-3 font-bold"></p>
+
+</section>
+
+<!-- TPS / TGS -->
+<section id="tps" class="p-6 grid md:grid-cols-2 gap-4">
+
+  <div class="bg-white p-4 rounded shadow">
+    <h2 class="font-bold text-lg">🤝 TPS (Think–Pair–Share)</h2>
+    <ol class="list-decimal pl-5 mt-2">
+      <li>Why CPU is called the brain of computer?</li>
+      <li>Difference between ALU and CU</li>
+      <li>Why memory is important in processing?</li>
+    </ol>
+  </div>
+
+  <div class="bg-white p-4 rounded shadow">
+    <h2 class="font-bold text-lg">👥 TGS (Think–Group–Share)</h2>
+    <ol class="list-decimal pl-5 mt-2">
+      <li>Group: Draw and explain block diagram</li>
+      <li>Discuss: Input vs Output devices examples</li>
+      <li>Present: How data flows in CPU system</li>
+    </ol>
+  </div>
+
+</section>
+
+<!-- PROJECT -->
+<section id="project" class="p-6 bg-white mx-6 mt-6 rounded-xl shadow">
+
+  <h2 class="text-xl font-bold">📌 Home Assignment / Project Work</h2>
+  <ul class="list-disc pl-5 mt-2">
+    <li>Create PPT: Von Neumann Architecture</li>
+    <li>Draw block diagram with explanation</li>
+    <li>Compare ALU vs CU in chart form</li>
+    <li>Write real-life example of CPU working (ATM system)</li>
+  </ul>
+
+</section>
+
+<script>
+const questions = [
+  {q:"CPU stands for?", options:["Central Processing Unit","Control Program Unit","Computer Power Unit","Central Program Utility"], answer:0},
+  {q:"ALU performs?", options:["Storage","Calculations","Printing","Input"], answer:1},
+  {q:"CU stands for?", options:["Control Unit","Central Unit","Computer Unit","Core Unit"], answer:0},
+  {q:"Which stores data temporarily?", options:["CPU","Memory","Printer","Monitor"], answer:1},
+  {q:"Output unit example?", options:["Keyboard","Mouse","Monitor","CPU"], answer:2},
+  {q:"Von Neumann model includes?", options:["5 units","4 units","3 units","2 units"], answer:1},
+  {q:"Brain of computer?", options:["Memory","CPU","Output","Input"], answer:1},
+  {q:"ALU does logical operations?", options:["True","False","Sometimes","Never"], answer:0},
+  {q:"Input unit role?", options:["Display","Process","Accept data","Store data"], answer:2},
+  {q:"CU controls?", options:["Only output","Only input","All operations","Storage only"], answer:2}
+];
+
+const quizBox = document.getElementById("quizBox");
+
+questions.forEach((q,i)=>{
+  let html = `<div class="mb-3">
+    <p class="font-semibold">${q.q}</p>`;
+  q.options.forEach((opt,j)=>{
+    html += `<label class="block">
+      <input type="radio" name="q${i}" value="${j}"> ${opt}
+    </label>`;
+  });
+  html += `</div>`;
+  quizBox.innerHTML += html;
+});
+
+function submitQuiz(){
+  let score = 0;
+  questions.forEach((q,i)=>{
+    let selected = document.querySelector(`input[name='q${i}']:checked`);
+    if(selected && parseInt(selected.value) === q.answer){
+      score++;
+    }
+  });
+
+  document.getElementById("result").innerText =
+    `Score: ${score} / ${questions.length}`;
+}
+</script>
+
+</body>
+</html>
